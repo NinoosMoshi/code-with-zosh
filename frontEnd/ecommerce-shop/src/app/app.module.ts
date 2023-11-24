@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoAngularMaterialModules } from './DemoAngularMaterialModules';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavContentComponent } from './nav-bar/nav-content/nav-content.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NavContentComponent } from './nav-bar/nav-content/nav-content.component
     ProductSliderComponent,
     NavBarComponent,
     NavContentComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
