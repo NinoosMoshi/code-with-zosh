@@ -1,1 +1,36 @@
-<p>products works!</p>
+<div class="h-[90vh]">
+
+   <main class="px-4 sm:px-6 lg:px-40 pg-10">
+      <div class="flex items-baseline justify-between border-gray-200 pb-6 pt-24">
+         <h1 class="text-4xl font-bold text-white">Products</h1>
+         <div class="flex items-center">
+           <div >
+            <button mat-button [matMenuTriggerFor]="sortMenu">Sort</button>
+            <mat-menu #sortMenu="matMenu">
+              <button mat-menu-item>Price: high-low</button>
+              <button mat-menu-item>Price: low-high</button>
+            </mat-menu>
+           </div>
+         </div>
+      </div>
+      <mat-divider></mat-divider>
+
+      <section class="pt-6">
+         <div class="grid grid-cols-1 gap-8 gap-y-10 lg:grid-cols-4">
+             <div>
+               <div class="flex items-center justify-between">
+                  <p class="text-lg">Filters</p>
+                  <mat-icon>filter_list</mat-icon>
+               </div>
+               <form class="hidden lg:block">
+
+               </form>
+             </div>
+             <div>
+              products
+             </div>
+         </div>
+      </section>
+   </main>
+
+</div>
