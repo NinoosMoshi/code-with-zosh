@@ -4,6 +4,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavContentComponent } from './components/nav-bar/nav-content/nav-content.component';
 import { DemoAngularMaterialModules } from 'src/app/DemoAngularMaterialModules';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 
 
@@ -11,7 +12,8 @@ import { DemoAngularMaterialModules } from 'src/app/DemoAngularMaterialModules';
   declarations: [
     NavBarComponent,
     FooterComponent,
-    NavContentComponent
+    NavContentComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { DemoAngularMaterialModules } from 'src/app/DemoAngularMaterialModules';
   ],
   exports: [
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    ProductCardComponent
   ]
 })
 export class SharedModule { }

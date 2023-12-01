@@ -7,26 +7,25 @@ import { ProductSliderComponent } from './components/home/product-slider/product
 import { DemoAngularMaterialModules } from 'src/app/DemoAngularMaterialModules';
 import { HomeProductCardComponent } from './components/home/home-product-card/home-product-card.component';
 import { ProductsComponent } from './components/products/products.component';
+import { SharedModule } from "../shared/shared.module";
 
 
 
 @NgModule({
-  declarations: [
-    FeatureComponent,
-    HomeComponent,
-    MainCarouselComponent,
-    ProductSliderComponent,
-    HomeProductCardComponent,
-    ProductsComponent
+    declarations: [
+        FeatureComponent,
+        HomeComponent,
+        MainCarouselComponent,
+        ProductSliderComponent,
+        HomeProductCardComponent,
+        ProductsComponent
+    ],
+    imports: [
+      CommonModule,
+      DemoAngularMaterialModules,
+      SharedModule,
   ],
-  imports: [
-    CommonModule,
-    DemoAngularMaterialModules
-  ],
-  exports: [
-    FeatureComponent,
-    HomeComponent,
-    ProductsComponent
-  ]
+
+    exports: [FeatureComponent, HomeComponent, ProductsComponent]
 })
 export class FeatureModule { }
