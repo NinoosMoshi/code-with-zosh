@@ -11,6 +11,7 @@ import { OrderComponent } from './module/feature/components/order/order.componen
 import { OrderDetailsComponent } from './module/feature/components/order-details/order-details.component';
 
 const routes: Routes = [
+  {path:'admin',loadChildren:() => import('./module/admin/admin-routing.module').then(m => m.AdminRoutingModule)},
   {path:"", component:HomeComponent},
   {path:'cart', component:CartComponent},
   {path:'product-details/:id', component:ProductDetailsComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'payment-success', component:PaymentSuccessComponent},
   {path:'account/orders', component:OrderComponent},
   {path:'order/:id', component:OrderDetailsComponent}
+
 
 ];
 
