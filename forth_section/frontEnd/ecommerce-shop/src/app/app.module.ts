@@ -8,6 +8,7 @@ import { DemoAngularMaterialModules } from './DemoAngularMaterialModules';
 import { FeatureModule } from './module/feature/feature.module';
 import { SharedModule } from './module/shared/shared.module';
 import { AdminModule } from './module/admin/admin.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,8 @@ import { AdminModule } from './module/admin/admin.module';
     DemoAngularMaterialModules,
     FeatureModule,
     SharedModule,
-    AdminModule
+    AdminModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

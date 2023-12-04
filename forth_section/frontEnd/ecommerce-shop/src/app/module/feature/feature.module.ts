@@ -15,6 +15,9 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { FormsModule } from '@angular/forms';
+import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
+
 
 
 
@@ -32,12 +35,14 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
         PaymentComponent,
         PaymentSuccessComponent,
         OrderComponent,
-        OrderDetailsComponent
+        OrderDetailsComponent,
+        ProductReviewCardComponent
     ],
     imports: [
       CommonModule,
       DemoAngularMaterialModules,
       SharedModule,
+      FormsModule
   ],
 
     exports: [FeatureComponent, HomeComponent, ProductsComponent]
