@@ -6,6 +6,8 @@ import { NavContentComponent } from './components/nav-bar/nav-content/nav-conten
 import { DemoAngularMaterialModules } from 'src/app/DemoAngularMaterialModules';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { AddressCardComponent } from './components/address-card/address-card.component';
 
 
 
@@ -15,7 +17,9 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
     FooterComponent,
     NavContentComponent,
     ProductCardComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    CartItemComponent,
+    AddressCardComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +29,9 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
     NavBarComponent,
     FooterComponent,
     ProductCardComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    CartItemComponent,
+    AddressCardComponent
   ]
 })
 export class SharedModule { }

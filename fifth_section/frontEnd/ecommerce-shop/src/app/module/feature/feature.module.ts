@@ -15,8 +15,9 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
+import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
 
 
 
@@ -36,13 +37,15 @@ import { ProductReviewCardComponent } from './components/product-details/product
         PaymentSuccessComponent,
         OrderComponent,
         OrderDetailsComponent,
-        ProductReviewCardComponent
+        ProductReviewCardComponent,
+        AddressFormComponent
     ],
     imports: [
       CommonModule,
       DemoAngularMaterialModules,
       SharedModule,
-      FormsModule
+      FormsModule,
+      ReactiveFormsModule
   ],
 
     exports: [FeatureComponent, HomeComponent, ProductsComponent]
