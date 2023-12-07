@@ -16,7 +16,7 @@
      </div>
    </div>
 
-   <div class="flex items-center lg:space-x-10 pt-4 justify-between">
+   <div *ngIf="showButton" class="flex items-center lg:space-x-10 pt-4 justify-between">
 
    <div class="flex items-center space-x-2">
 
@@ -40,7 +40,7 @@
 
    </div>
 <button (click)="removeCArtItem()" color="accent" mat-stroked-button>Remove</button>
-</div>
+   </div>
 
 
 </div>

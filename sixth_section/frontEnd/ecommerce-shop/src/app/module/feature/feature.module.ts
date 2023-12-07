@@ -18,6 +18,7 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
 import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
+import { OrderCardComponent } from './components/order/order-card/order-card.component';
 
 
 
@@ -38,7 +39,8 @@ import { AddressFormComponent } from './components/checkout/address-form/address
         OrderComponent,
         OrderDetailsComponent,
         ProductReviewCardComponent,
-        AddressFormComponent
+        AddressFormComponent,
+        OrderCardComponent
     ],
     imports: [
       CommonModule,

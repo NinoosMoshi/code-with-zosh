@@ -1,1 +1,52 @@
-<p class="py-10">payment works!</p>
+<div class="mt-24 space-y-5 px-5 lg:px-20">
+   <ng-container>
+      <div class="p-5 shadow-lg rounded-md box my-5">
+         <app-address-card showButton="false"/>
+      </div>
+      <div class="grid grid-cols-1 gap-5 lg:grid-cols-3 relative justify-between py-5">
+        <div class="col-span-2">
+           <div class="space-y-3 box rounded-md">
+              <div *ngFor="let product of products; let last=last">
+                <app-cart-item />
+                <mat-divider *ngIf="!last"></mat-divider>
+              </div>
+           </div>
+        </div>
+        <section class="col-span-1 px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">
+          <ng-container>
+            <div class="box p-5 rounded-md">
+              <p class="font-bold text-gray-500 pb-4">PRICE DETAILS</p>
+              <mat-divider></mat-divider>
+              <div class="space-y-3">
+                <div class="flex justify-between pt-3">
+                  <span>Total Price</span>
+                  <span>$6999</span>
+                </div>
+                <div class="flex justify-between pt-3">
+                  <span>Discount</span>
+                  <span class="text-green-700">$-466</span>
+                </div>
+                <div class="flex justify-between pt-3">
+                  <span>Delivery Charges</span>
+                  <span class="text-green-700">Free</span>
+                </div>
+                <div class="flex justify-between font-semibold text-lg">
+                  <span>Total Amount</span>
+                  <span class="text-green-700">$7999</span>
+                </div>
+              </div>
+              <button
+
+                style="padding: 1.5rem"
+                class="text-lg mt-8 p-28 px-10 w-full"
+                mat-raised-button
+                color="accent"
+              >
+                CHECKOUT
+              </button>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+   </ng-container>
+</div>
