@@ -1,0 +1,106 @@
+<div class="flex flex-col items-center">
+
+   <main class="px-4 sm:px-6 max-w-7xl pg-10">
+      <div class="flex items-baseline justify-between border-gray-200 pb-6 pt-24">
+         <h1 class="text-4xl font-bold text-white">Products</h1>
+         <div class="flex items-center">
+           <div >
+            <button mat-button [matMenuTriggerFor]="sortMenu">Sort</button>
+            <mat-menu #sortMenu="matMenu">
+              <button mat-menu-item>Price: high-low</button>
+              <button mat-menu-item>Price: low-high</button>
+            </mat-menu>
+           </div>
+         </div>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <section class="pt-6">
+         <div class="grid grid-cols-1 gap-8 gap-y-10 lg:grid-cols-4">
+             <div>
+               <div class="flex items-center justify-between">
+                  <p class="text-lg">Filters</p>
+                  <mat-icon>filter_list</mat-icon>
+               </div>
+               <form class="hidden lg:block">
+
+                  <!--start filterDate-->
+                  <div *ngFor="let item of filterData let last=last">
+                     <div class=" py-6">
+
+                       <span class="font-medium">{{item.name}}</span>
+
+                       <div class="pt-6" id="filter-section-0">
+                          <div class="scroll-py-4">
+                             <div *ngFor="let option of item.options">
+                                <div class="flex items-center">
+                                  <mat-checkbox
+                                    id="'filter - ' + option.value"
+                                    [name]="item.id"
+                                    [value]="option.value"
+                                    (click)="handleMultipleSelectFilter(option.value, item.id)"
+                                  >
+                                    <span>{{option.label}}</span>
+                                  </mat-checkbox>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+
+                     </div>
+
+                     <mat-divider *ngIf="!last"></mat-divider>
+
+                  </div>
+                  <!--end filterDate-->
+
+                  <mat-divider></mat-divider>
+
+                  <!--start singleFilterDate-->
+                  <div *ngFor="let item of singleFilterData let last=last">
+                    <div class=" py-6">
+
+                      <span class="font-medium">{{item.name}}</span>
+
+                      <div class="pt-6" id="filter-section-0">
+                         <div class="scroll-py-4">
+                            <div *ngFor="let option of item.options">
+                               <div class="flex items-center">
+                                 <mat-radio-button
+                                   id="'filter - ' + option.value"
+                                   [name]="item.id"
+                                   [value]="option.value"
+                                   (click)="handleSingleSelectFilter(option.value, item.id)"
+                                 >
+                                   <span>{{option.label}}</span>
+                                 </mat-radio-button>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+
+                    </div>
+
+                    <mat-divider *ngIf="!last"></mat-divider>
+
+                 </div>
+                  <!--end singleFilterDate-->
+
+               </form>
+             </div>
+
+             <div class="lg:col-span-3">
+              <div class="flex flex-wrap justify-evenly">
+                 <ng-container *ngFor="let item of menPants">
+                    <app-product-card [product]="item"/>
+                 </ng-container>
+              </div>
+              products
+             </div>
+
+         </div>
+      </section>
+   </main>
+
+</div>

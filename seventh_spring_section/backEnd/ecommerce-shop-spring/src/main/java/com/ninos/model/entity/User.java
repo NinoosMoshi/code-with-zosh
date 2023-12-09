@@ -6,15 +6,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "users")
 public class User {
 
     @Id
@@ -45,6 +49,28 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name="code_id")
     private Code code;
+
+
+   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+   private List<Address> addresses = new ArrayList<>();
+
+   @Embedded
+   @ElementCollection
+   @CollectionTable(name = "payment_information", joinColumns = @JoinColumn(name = "user_id"))
+   private List<PaymentInformation> paymentInformations = new ArrayList<>();
+
+
+   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+   @JsonIgnore
+   private List<Rating> ratings = new ArrayList<>();
+
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Review> reviews = new ArrayList<>();
+
+
+    private LocalDateTime createdAt;
 
 
 }
