@@ -10,8 +10,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Setter
@@ -19,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class OrderItem {
+public class CartItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +25,7 @@ public class OrderItem {
 
     @JsonIgnore
     @ManyToOne
-    private Order order;
+    private Cart cart;
 
     @ManyToOne
     private Product product;
@@ -41,14 +39,6 @@ public class OrderItem {
     private Integer discountedPrice;
 
     private Long userId;
-
-    private LocalDateTime deliveryDate;
-
-
-
-
-
-
 
 
 }
