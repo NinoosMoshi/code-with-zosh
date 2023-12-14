@@ -25,6 +25,7 @@ public class CreateProductRequest {
 
     private String imageUrl;
 
+    // men/clothing/mens_shirt     men-> topLevel  clothing-> secondLevel  mens_shirt-> thirdLevel
     private String topLevelCategory;
     private String secondLevelCategory;
     private String thirdLevelCategory;
